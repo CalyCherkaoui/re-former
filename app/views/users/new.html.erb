@@ -18,6 +18,8 @@
     </form>
 </div> -->
 
+<%# With rails form_tag helper%>
+<!-- 
 <div class="container">
   <%= form_tag('/users', method: "post") do %>
     <%= label_tag(:username, "User name:") %>
@@ -30,5 +32,23 @@
     <%= password_field_tag(:password) %>
     <br><br>
     <%= submit_tag "Save user", class: "btn btn-sucess", data: { confirm: "You are sure you want to save it?" }%>
+  <% end %>
+</div>
+-->
+
+<%# With rails form_for helper%>
+
+<div class="container">
+  <%= form_for @user do |f| %>
+    <%= f.label :username, 'User Name:'%>
+    <%= f.text_field :username, placeholder: 'Enter your name her!' %>
+    <br><br>
+    <%= f.label :email, 'E-mail'%>
+    <%= f.email_field :email, placeholder: 'Ex: foo@bar.com'%>
+    <br><br>
+    <%= f.label :password, 'Password' %>
+    <%= f.password_field :password %>
+    <br><br>
+    <%= f.submit 'Save user'%>
   <% end %>
 </div>
