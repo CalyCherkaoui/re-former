@@ -1,18 +1,34 @@
 <h1>Sign-up for a new user</h1>
+<!-- Form with HTML
+  <div class="container">
+    <form action="/users" method="post" name="users" class="my_form" accept-charset="UTF-8">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+      <label for="user[username]">User name</label>
+      <input type="text" name="user[username]" id="username"><br><br>
+
+      <label for="user[email]">Email</label>
+      <input type="text" name="user[email]" id="email"><br><br>
+
+      <label for="user[password]">Password</label>
+      <input type="password" name="user[password]" id="password"><br><br>
+
+      <input type="submit" value="Submit" class="btn btn-success">
+
+    </form>
+</div> -->
+
 <div class="container">
-  <form action="/users" method="post" name="users" class="my_form" accept-charset="UTF-8">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-
-    <label for="user[username]">User name</label>
-    <input type="text" name="user[username]" id="username"><br><br>
-
-    <label for="user[email]">Email</label>
-    <input type="text" name="user[email]" id="email"><br><br>
-
-    <label for="user[password]">Password</label>
-    <input type="password" name="user[password]" id="password"><br><br>
-
-    <input type="submit" value="Submit" class="btn btn-success">
-
-  </form>
+  <%= form_tag('/users', method: "post") do %>
+    <%= label_tag(:username, "User name:") %>
+    <%= text_field_tag(:username) %>
+    <br><br>
+    <%= label_tag(:email, "E-mail:") %>
+    <%= email_field_tag(:email) %>
+    <br><br>
+    <%= label_tag(:password, "Password:")%>
+    <%= password_field_tag(:password) %>
+    <br><br>
+    <%= submit_tag "Save user", class: "btn btn-sucess", data: { confirm: "You are sure you want to save it?" }%>
+  <% end %>
 </div>
