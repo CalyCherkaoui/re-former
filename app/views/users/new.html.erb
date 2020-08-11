@@ -3,14 +3,14 @@
   <form action="/users" method="post" name="users" class="my_form" accept-charset="UTF-8">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-    <label for="username">User name</label>
-    <input type="text" name="username" id="username"><br><br>
+    <label for="user[username]">User name</label>
+    <input type="text" name="user[username]" id="username"><br><br>
 
-    <label for="email">Email</label>
-    <input type="text" name="email" id="email"><br><br>
+    <label for="user[email]">Email</label>
+    <input type="text" name="user[email]" id="email"><br><br>
 
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password"><br><br>
+    <label for="user[password]">Password</label>
+    <input type="password" name="user[password]" id="password"><br><br>
 
     <input type="submit" value="Submit" class="btn btn-success">
 
