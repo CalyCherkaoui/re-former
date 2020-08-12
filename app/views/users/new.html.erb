@@ -1,4 +1,4 @@
-<h1>Sign-up for a new user</h1>
+<h1 class="text-center text-info mt-4">Sign-up for a new user</h1>
 <!-- Form with HTML
   <div class="container">
     <form action="/users" method="post" name="users" class="my_form" accept-charset="UTF-8">
@@ -37,18 +37,25 @@
 -->
 
 <%# With rails form_for helper%>
-
-<div class="container">
-  <%= form_for @user do |f| %>
-    <%= f.label :username, 'User Name:'%>
-    <%= f.text_field :username, placeholder: 'Enter your name her!' %>
-    <br><br>
-    <%= f.label :email, 'E-mail'%>
-    <%= f.email_field :email, placeholder: 'Ex: foo@bar.com'%>
-    <br><br>
-    <%= f.label :password, 'Password' %>
-    <%= f.password_field :password %>
-    <br><br>
-    <%= f.submit 'Save user'%>
-  <% end %>
+<div class= "container-fluid row">
+  <div class="container col-md-3"></div>
+  <div class="container col-md-6">
+    <%= form_for @user do |f| %>
+      <div class="mt-4 mb-4">
+        <%= f.label :username, 'User Name:'%><br>
+        <%= f.text_field :username, placeholder: 'Enter your name her!' %>
+      </div>
+      <div class="mt-4 mb-4">
+        <%= f.label :email, 'E-mail'%><br>
+        <%= f.email_field :email, placeholder: 'Ex: foo@bar.com'%>
+      </div>
+      <div class="mt-4 mb-4">
+        <%= f.label :password, 'Password' %><br>
+        <%= f.password_field :password %>
+      </div>
+      <%= f.submit 'Save user', class: 'btn btn-info btn-block'%>
+    <% end %>
+  </div>
+  <div class="container col-md-3"></div>
 </div>
+
