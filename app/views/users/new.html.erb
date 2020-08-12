@@ -44,14 +44,14 @@
       <% if @user.errors.any? %>
         <div id="error_explanation">
           <div class="card">
-            <div class="card-header text-center">
-              <strong class="text-center text-danger">
+            <div class="card-header text-center bg-dark">
+              <strong class="text-center text-light">
                 <%= pluralize(@user.errors.count, "error")%>
                 prevented this user from being saved:
               </strong>
             </div>
             <div class="card-body">
-              <div class="card-text">
+              <div class="card-text text-info">
                 <ul>
                   <% @user.errors.full_messages.each do |msg| %>
                   <li><%= msg %></li>
