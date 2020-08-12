@@ -1,0 +1,18 @@
+<h1 class="text-center text-info">All users</h1>
+
+<div class="container-fluid row mb-5 p-3 bg-light">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <% @users.each do |u| %>
+      <%= link_to edit_user_path(u), class: 'text-decoration-none' do %>
+        <div class="card mt-2 mb-2">
+          <div class="card-body">
+            Name : <%= u.username %>, Email: <%= u.email %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+    <%= link_to 'Add new user >> ', new_user_path, class: 'btn btn-warning btn-block' %>
+  </div>
+  <div class="col-md-3"></div>
+</div>
