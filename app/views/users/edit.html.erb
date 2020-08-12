@@ -1,0 +1,44 @@
+<h1 class="text-center text-info mt-4">Edit user</h1>
+
+<div class="container-fluid row">
+  <div class="container col-md-3"></div>
+  <div class="container col-md-6 bg-light">
+    <%= form_for @user do |f| %>
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <div class="card">
+            <div class="card-header text-center bg-dark">
+              <strong class="text-center text-light">
+                <%= pluralize(@user.errors.count, "error")%>
+                prevented this user from being saved:
+              </strong>
+            </div>
+            <div class="card-body">
+              <div class="card-text text-info">
+                <ul>
+                  <% @user.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <div class="mt-4 mb-4">
+        <%= f.label :username, 'User Name:'%><br>
+        <%= f.text_field :username, placeholder: 'Enter your name her!', class: 'form-control' %>
+      </div>
+      <div class="mt-4 mb-4">
+        <%= f.label :email, 'E-mail'%><br>
+        <%= f.email_field :email, placeholder: 'Ex: foo@bar.com', class: 'form-control' %>
+      </div>
+      <div class="mt-4 mb-4">
+        <%= f.label :password, 'Password' %><br>
+        <%= f.password_field :password, class: 'form-control' %>
+      </div>
+      <%= f.submit 'Save user', class: 'btn btn-info btn-block'%>
+    <% end %>
+  </div>
+  <div class="container col-md-3"></div>
+</div>
