@@ -2,6 +2,7 @@
 
 This is a part of the Forms Project in The Odin Project’s Ruby on Rails Curriculum. Find it at http://www.theodinproject.com
 The objectif of this exercise is to build a User model with the functionalities of creating, editing, deleting and displaying.
+The project focuses on Forms by bulding them first in the HTML fashioned way and then with Rails forms helpers like for_tag and form_for.
 
 ## Built with:
 
@@ -50,7 +51,7 @@ Link to the view: <http://localhost:3000/users/new>
 ![screenshot](./app/assets/images/adduser.png)
 
 ### Editing a user
-Link to the view: <>http://localhost:3000/users/:id/edit>
+Link to the view: <http://localhost:3000/users/:id/edit>
 
 ![screenshot](./app/assets/images/edituser.png)
 
