@@ -1,8 +1,8 @@
 # Building Forms with Ruby on Rails
 
-This is a part of the Forms Project in The Odin Project’s Ruby on Rails Curriculum. Find it at http://www.theodinproject.com
-The objectif of this exercise is to build a User model with the functionalities of creating, editing, deleting and displaying.
-The project focuses on Forms by bulding them first in the HTML fashioned way and then with Rails forms helpers like for_tag and form_for.
+This is a part of the Forms Project in The Odin Project’s Ruby on Rails Curriculum. Find it at http://www.theodinproject.com.
+
+The objective of this exercise is to build a User model with the functionalities of creating, editing, deleting, and displaying. The project focuses on building forms, first in HTML fashioned way, and then with Rails forms helpers like for_tag and form_for.
 
 ## Built with:
 
